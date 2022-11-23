@@ -1,13 +1,23 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
+
+const GNBContainer = styled.div`
+    z-index: 100;
+    display: flex;
+    height: 130px;
+`;
 
 const Header = () => {
-  return (
-    <div className="container-fluid" id="GNB">
-      <div className="container fc00">
-          HEADER
-      </div>
-    </div>
-  )
-}
+    return (
+        <GNBContainer className="container-fluid">
+            <div className="container fc00">
+                <div className="row">
+                    <div className="col-2">LOGO</div>
+                    <div className="col-10">MENU</div>
+                </div>
+            </div>
+        </GNBContainer>
+    );
+};
 
 export default Header;

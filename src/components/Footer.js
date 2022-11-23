@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
+
+const FNBContainer = styled.div`
+    display: flex;
+    height: 100px;
+`;
 
 const Footer = () => {
     return (
-        <div className="container-fluid">
-            <div className="container fc00">
-                FOOTER
-            </div>
-        </div>
-    )
-}
+        <FNBContainer className="container-fluid">
+            <div className="container fc00">FOOTER</div>
+        </FNBContainer>
+    );
+};
 
 export default Footer;
