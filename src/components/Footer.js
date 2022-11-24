@@ -6,9 +6,9 @@ const FNBContainer = styled.div`
     height: 100px;
 `;
 
-const Footer = () => {
+const Footer = (props) => {
     return (
-        <FNBContainer className="container-fluid">
+        <FNBContainer className="container-fluid fixed-bottom">
             <div className="container fc00">FOOTER</div>
         </FNBContainer>
     );

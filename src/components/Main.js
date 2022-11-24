@@ -2,17 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-    display: flex;
-    flex: 1;
-    height: 100%;
+    position: relative;
+    top: 130px;
+    height: calc(100vh-130px);
 `;
 
-const Content = () => {
+const Main = (props) => {
     return (
         <Container className="container-fluid">
-            <div className="container fc00">CONTENT</div>
+            <div className="container fc00">Main</div>
         </Container>
     );
 };
 
-export default Content;
+export default Main;
