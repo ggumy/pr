@@ -1,18 +1,18 @@
 import React from "react";
+import MainContainer from "./MainContainer";
 import styled from "styled-components";
 
 const Container = styled.div`
-    position: relative;
-    top: 130px;
-    height: calc(100vh-130px);
+    position: flex;
+    height: 100vh;
 `;
 
-const Main = (props) => {
+const Home = () => {
     return (
         <Container className="container-fluid">
-            <div className="container fc00">Main</div>
+            <MainContainer />
         </Container>
     );
 };
 
-export default Main;
+export default Home;
