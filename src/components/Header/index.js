@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { Logo } from "./Logo";
 import { HambergerMenu } from "./HambergerMenu";
-import { gsap, Power0 } from "gsap";
+import { gsap, Power3 } from "gsap";
 
 /**
  * 참고 페이지
@@ -29,9 +29,9 @@ const Header = (props) => {
         const div01 = divRef.current;
         tl.to(div01, {
             opacity: 1,
-            delay: 0.3,
-            duration: 0.5,
-            ease: Power0.easeInOut,
+            delay: 2.4,
+            duration: 0.3,
+            ease: Power3.easeInOut,
         });
     });
 

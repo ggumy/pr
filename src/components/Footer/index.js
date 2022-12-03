@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
-import { gsap, Power0 } from "gsap";
+import { gsap, Power3 } from "gsap";
 import FooterContainer from "./FooterContainer";
 
 const FNBContainer = styled.div`
@@ -19,9 +19,9 @@ const Footer = (props) => {
         const div01 = divRef.current;
         tl.to(div01, {
             opacity: 1,
-            delay: 0.3,
-            duration: 0.5,
-            ease: Power0.easeInOut,
+            delay: 2.4,
+            duration: 0.3,
+            ease: Power3.easeInOut,
         });
     });
     return (

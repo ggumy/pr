@@ -63,6 +63,8 @@ body {
     padding: 0;
     overflow-y: auto;
     overflow-x: hidden;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -2965,8 +2967,8 @@ select::-ms-expand {
     }
 
     .fs_100_70_50 {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 40px;
+        line-height: 50px;
     }
 
     .he500_400_300 {
@@ -3081,8 +3083,8 @@ select::-ms-expand {
     }
 
     .fs_100_70_50 {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 40px;
+        line-height: 50px;
     }
 
     .he500_400_300 {
@@ -3188,8 +3190,8 @@ select::-ms-expand {
     }
 
     .fs_100_70_50 {
-        font-size: 70px;
-        line-height: 100px;
+        font-size: 100px;
+        line-height: 110px;
     }
 
     .he820_he300 {
@@ -3240,7 +3242,7 @@ select::-ms-expand {
     }
 
     .fs_100_70_50 {
-        font-size: 70px;
+        font-size: 100px;
         line-height: 100px;
     }
 
@@ -3299,7 +3301,7 @@ select::-ms-expand {
 
     .fs_100_70_50 {
         font-size: 100px;
-        line-height: 100px;
+        line-height: 110px;
     }
 
     .he500_400_300 {
