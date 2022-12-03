@@ -1,14 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { GrInstagram, GrFacebook } from "react-icons/gr";
 import { CgMail, CgCopyright } from "react-icons/cg";
+
+import "./css/style.css";
 
 //https://react-icons.github.io/react-icons
 
 const FooterContainer = () => {
     return (
-        <div className="container fc00">
+        <div className="footer container fc00">
             <div className="row">
-                <div className="col-12 fs_14 lh14 f_we4 fc00">CONTACT US</div>
+                <div className="col-12 fs_14 lh14 f_we4 fc00">
+                    <Link to="/contactus" className="gnb_sub_link">
+                        CONTACT US
+                    </Link>
+                </div>
                 <div className="col-6 col-sm-9 mt10">
                     <div className="col-12 fc6 lh18">
                         <ul className="float-left">

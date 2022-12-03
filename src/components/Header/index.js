@@ -13,6 +13,7 @@ import { gsap, Power3 } from "gsap";
 const GNBContainer = styled.div`
     z-index: 100;
     display: flex;
+    width: 100%;
     height: 6rem;
 `;
 
@@ -29,29 +30,25 @@ const Header = (props) => {
         const div01 = divRef.current;
         tl.to(div01, {
             opacity: 1,
-            delay: 2.4,
+            delay: 2.0,
             duration: 0.3,
             ease: Power3.easeInOut,
         });
     });
 
     return (
-        <GNBContainer
-            ref={divRef}
-            style={divStyle}
-            className="container-fluid fixed-top"
-        >
-            <div className="container position-relative fc00">
-                <div className="row">
-                    <div className="col-6 float-start">
-                        <Logo />
-                    </div>
-                    <div className="col-6 float-end">
-                        <HambergerMenu />
-                    </div>
+        <>
+            <GNBContainer
+                ref={divRef}
+                style={divStyle}
+                className="container-fluid fixed-top"
+            >
+                <div className="container position-relative fc00">
+                    <Logo />
+                    <HambergerMenu />
                 </div>
-            </div>
-        </GNBContainer>
+            </GNBContainer>
+        </>
     );
 };
 
