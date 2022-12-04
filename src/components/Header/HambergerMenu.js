@@ -1,5 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux"; // 디스패치
+import * as actions from "../../actions"; // store 엑션 함수를 호출
 import { gsap, Power3 } from "gsap";
 
 import "./css/style.css";
@@ -8,7 +10,11 @@ import "./css/style.css";
 https://hemanta.io/how-to-create-a-hamburger-menu-using-gsap-and-react/
 */
 
+// dispatch를 사용하기 위한 준비
+
 export const HambergerMenu = () => {
+    const dispatch = useDispatch();
+
     const t1 = gsap.timeline({ paused: true, reversed: true });
     const t2 = gsap.timeline({ paused: true, reversed: true });
 
@@ -95,13 +101,20 @@ export const HambergerMenu = () => {
     }, [t1, t2]);
 
     const handleMenuClick = () => {
-        t1.reversed() ? t1.play() : t1.reverse();
+        if (t1.reversed()) {
+            t1.play();
+            dispatch(actions.visibleGNB(true));
+        } else {
+            t1.reverse();
+            dispatch(actions.visibleGNB(false));
+        }
         t2.reversed() ? t2.play() : t2.reverse(0);
     };
 
     const handleNavLinkClick = () => {
         t1.reverse();
         t2.reverse(0);
+        dispatch(actions.visibleGNB(false));
     };
 
     return (
