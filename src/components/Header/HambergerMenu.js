@@ -1,6 +1,6 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux"; // 디스패치
+import { useDispatch, useSelector } from "react-redux"; // 디스패치
 import * as actions from "../../actions"; // store 엑션 함수를 호출
 import { gsap, Power3 } from "gsap";
 
@@ -14,12 +14,29 @@ https://hemanta.io/how-to-create-a-hamburger-menu-using-gsap-and-react/
 
 export const HambergerMenu = () => {
     const dispatch = useDispatch();
+    const [itemcolor, setItemcolor] = useState("#fff");
+
+    /** 시작 스토어 호출 */
+    const NaviItems = useSelector((state) => state.ui.NaviItems);
+    const isMain = useSelector((state) => state.ui.isMain);
+    //const isGnbVisible = useSelector((state) => state.ui.isGnbVisible);
+
+    useEffect(() => {
+        if (isMain) {
+            setItemcolor("#fff");
+            document.body.style = "background-color: #111;";
+        } else {
+            setItemcolor("#000");
+            document.body.style = "background-color: #fff;";
+        }
+    }, [isMain, itemcolor]);
 
     const t1 = gsap.timeline({ paused: true, reversed: true });
     const t2 = gsap.timeline({ paused: true, reversed: true });
 
     const navRef = useRef(null);
     const menuRef = useRef(null);
+
     useLayoutEffect(() => {
         const menuLink1 = navRef.current.querySelector(".menu-link-1");
         const menuLink2 = navRef.current.querySelector(".menu-link-2");
@@ -115,59 +132,45 @@ export const HambergerMenu = () => {
         t1.reverse();
         t2.reverse(0);
         dispatch(actions.visibleGNB(false));
+        dispatch(actions.setMain(false));
     };
 
     return (
         <>
             <div className="menu" ref={menuRef} onClick={handleMenuClick}>
                 <div className="menu-line-wrapper">
-                    <div className="menu-line menu-line-1"></div>
-                    <div className="menu-line menu-line-2"></div>
-                    <div className="menu-line menu-line-3"></div>
+                    <div
+                        className="menu-line menu-line-1"
+                        style={{ backgroundColor: `${itemcolor}` }}
+                    ></div>
+                    <div
+                        className="menu-line menu-line-2"
+                        style={{ backgroundColor: `${itemcolor}` }}
+                    ></div>
+                    <div
+                        className="menu-line menu-line-3"
+                        style={{ backgroundColor: `${itemcolor}` }}
+                    ></div>
                 </div>
             </div>
             <nav ref={navRef}>
                 <div className="nav-menu pl95_20">
-                    <div
-                        className="menu-text menu-link-1 fs_100_70_50 f_we7"
-                        onClick={handleNavLinkClick}
-                    >
-                        <Link to="/home" className="nav-link menu_default">
-                            HOME
-                        </Link>
-                    </div>
-                    <div
-                        className="menu-text menu-link-2 fs_100_70_50 f_we7"
-                        onClick={handleNavLinkClick}
-                    >
-                        <Link to="/weare" className="nav-link menu_default">
-                            WE ARE
-                        </Link>
-                    </div>
-                    <div
-                        className="menu-text menu-link-3 fs_100_70_50 f_we7"
-                        onClick={handleNavLinkClick}
-                    >
-                        <Link to="/contactus" className="nav-link menu_default">
-                            CONTACT US
-                        </Link>
-                    </div>
-                    <div
-                        className="menu-text menu-link-4 fs_100_70_50 f_we7"
-                        onClick={handleNavLinkClick}
-                    >
-                        <Link to="/inside" className="nav-link menu_default">
-                            INSIDE
-                        </Link>
-                    </div>
-                    <div
-                        className="menu-text menu-link-5 fs_100_70_50 f_we7"
-                        onClick={handleNavLinkClick}
-                    >
-                        <Link to="/portfolio" className="nav-link menu_default">
-                            PORTFOLIO
-                        </Link>
-                    </div>
+                    {NaviItems.map((NaviItem, i) => {
+                        return (
+                            <div
+                                key={NaviItem.id}
+                                className={`menu-text menu-link-${NaviItem.id} fs_100_70_50 f_we7`}
+                                onClick={handleNavLinkClick}
+                            >
+                                <Link
+                                    to={NaviItem.url}
+                                    className="nav-link menu_default"
+                                >
+                                    {NaviItem.name}
+                                </Link>
+                            </div>
+                        );
+                    })}
                 </div>
             </nav>
         </>

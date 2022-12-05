@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux"; // 디스패치
+import * as actions from "../../actions"; // store 엑션 함수를 호출
 import MainContainer from "./MainContainer";
 import styled from "styled-components";
 
@@ -16,6 +18,10 @@ const Container = styled.div`
 `;
 
 const Home = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(actions.setMain(true));
+    });
     return (
         <Container className="container-fluid">
             <MainContainer />
