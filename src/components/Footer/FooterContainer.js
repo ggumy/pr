@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux"; // 디스패치
 import { Link } from "react-router-dom";
 import { GrInstagram, GrFacebook } from "react-icons/gr";
 import { CgMail, CgCopyright } from "react-icons/cg";
@@ -8,11 +9,15 @@ import "./css/style.css";
 //https://react-icons.github.io/react-icons
 
 const FooterContainer = () => {
+    const isMain = useSelector((state) => state.ui.isMain);
     return (
         <div className="footer container fc00">
             <div className="row">
-                <div className="col-12 fs_14 lh14 f_we4 fc00">
-                    <Link to="/contactus" className="gnb_sub_link">
+                <div className="col-12 fs_14 lh14 f_we5 fc00 roboto">
+                    <Link
+                        to="/contactus"
+                        className={`${isMain ? "gnb_sub_link" : "sub_link"}`}
+                    >
                         CONTACT US
                     </Link>
                 </div>
@@ -39,14 +44,22 @@ const FooterContainer = () => {
                 <div className="col-6 col-sm-3 d-sm-block">
                     <ul className="float-end mt25">
                         <li className="float-start mr10">
-                            <span className="fs_20">
+                            <Link
+                                className={`fs_20 ${
+                                    isMain ? "gnb_sub_link" : "sub_link"
+                                }`}
+                            >
                                 <GrFacebook />
-                            </span>
+                            </Link>
                         </li>
                         <li className="float-end">
-                            <span className="fs_20">
+                            <Link
+                                className={`fs_20 ${
+                                    isMain ? "gnb_sub_link" : "sub_link"
+                                }`}
+                            >
                                 <GrInstagram />
-                            </span>
+                            </Link>
                         </li>
                     </ul>
                 </div>

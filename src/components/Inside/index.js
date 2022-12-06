@@ -9,7 +9,7 @@ const Inside = () => {
     });
 
     return (
-        <div className="container-fluid mt120">
+        <div className="container-fluid mt150">
             <div className="container ">
                 <div className="col-12 pz fs_18 lh18 fc0 f_we5 letter36">
                     INSIDE

@@ -70,13 +70,13 @@ const MainContainer = () => {
             <div className="movediv01 container"></div>
             <div className="movediv02 container d-flex h-100">
                 <div ref={textRef} className="row align-self-center">
-                    <div className="col-12 fs_100_70_50 fc00 f_we7 lh110 pl95_20">
+                    <div className="col-12 fs_100_70_50 fc00 f_we7 lh110 pl95_20 roboto">
                         <div className="text-1">WE WILL DO</div>
                         <div className="text-2">BEST TO MAKE</div>
                         <div className="text-3">YOU SUCCESS</div>
                     </div>
 
-                    <div className="text-4 col-12 fc00 fs_14 lh18 letterp14 f_we6 mt40 pl95_20">
+                    <div className="text-4 col-12 fc00 fs_14 lh18 letterp14 f_we6 mt40 pl95_20 roboto">
                         <Link to="/portfolio" className="gnb_sub_link">
                             SHOW PORTFOLIO{" "}
                             <img

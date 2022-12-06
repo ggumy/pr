@@ -27,7 +27,7 @@ const Footer = (props) => {
     return (
         <FNBContainer
             ref={divRef}
-            className={`container-fluid ${isMain ? "fixed-bottom" : ""}`}
+            className={`container-fluid ${isMain ? "fixed-bottom" : "mt30"}`}
         >
             <FooterContainer />
         </FNBContainer>

@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @font-face {
     font-family: 'Noto Sans KR';
@@ -69,12 +70,14 @@ body {
 }
 
 body {
-    font-family: 'Noto Sans KR';
+    font-family: 'Roboto', 'Noto Sans KR';
     font-size: 16px;
     background-color: #111;
 }
 
-
+.roboto {
+    font-family: 'Roboto';
+}
 
 /* padding margin class*/
 
@@ -376,6 +379,10 @@ a:visited {
 
 .mt140 {
     margin-top: 140px;
+}
+
+.mt150 {
+    margin-top: 150px;
 }
 
 .mt160 {
@@ -2968,7 +2975,7 @@ select::-ms-expand {
 
     .fs_100_70_50 {
         font-size: 40px;
-        line-height: 50px;
+        line-height: 45px;
     }
 
     .he500_400_300 {
@@ -3084,7 +3091,7 @@ select::-ms-expand {
 
     .fs_100_70_50 {
         font-size: 40px;
-        line-height: 50px;
+        line-height: 45px;
     }
 
     .he500_400_300 {
@@ -3137,7 +3144,7 @@ select::-ms-expand {
 
     .fs_100_70_50 {
         font-size: 40px;
-        line-height: 50px;
+        line-height: 45px;
     }
 
     .he820_he300 {
@@ -3191,7 +3198,7 @@ select::-ms-expand {
 
     .fs_100_70_50 {
         font-size: 70px;
-        line-height: 80px;
+        line-height: 75px;
     }
 
     .he820_he300 {
@@ -3243,7 +3250,7 @@ select::-ms-expand {
 
     .fs_100_70_50 {
         font-size: 100px;
-        line-height: 110px;
+        line-height: 105px;
     }
 
     .he820_he300 {
@@ -3301,7 +3308,7 @@ select::-ms-expand {
 
     .fs_100_70_50 {
         font-size: 100px;
-        line-height: 110px;
+        line-height: 105px;
     }
 
     .he500_400_300 {

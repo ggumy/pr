@@ -79,8 +79,7 @@ export const HambergerMenu = () => {
                     ease: Power3.easeinOut,
                 },
                 "<"
-            )
-            .reverse();
+            );
 
         t2.to(menuLink1, {
             opacity: 1,
@@ -116,8 +115,7 @@ export const HambergerMenu = () => {
                 delay: 0.1,
                 duration: 0.1,
                 ease: Power3.easeIn,
-            })
-            .reverse();
+            });
     }, [t1, t2]);
 
     const handleMenuClick = (e) => {
@@ -126,15 +124,15 @@ export const HambergerMenu = () => {
             t1.play();
             dispatch(actions.visibleGNB(true));
         } else {
-            t1.progress(1).reverse(0);
+            t1.reverse(0);
             dispatch(actions.visibleGNB(false));
         }
-        t2.reversed() ? t2.play() : t2.progress(1).reverse(0);
+        t2.reversed() ? t2.play() : t2.reverse(0);
     };
 
     const handleNavLinkClick = () => {
-        t1.progress(1).reverse(0);
-        t2.progress(1).reverse(0);
+        t1.reverse(0);
+        t2.reverse(0);
         dispatch(actions.visibleGNB(false));
         dispatch(actions.setMain(false));
     };
@@ -163,7 +161,7 @@ export const HambergerMenu = () => {
                         return (
                             <div
                                 key={NaviItem.id}
-                                className={`menu-text menu-link-${NaviItem.id} fs_100_70_50 f_we7`}
+                                className={`menu-text menu-link-${NaviItem.id} fs_100_70_50 f_we7 roboto`}
                                 onClick={handleNavLinkClick}
                             >
                                 <Link

@@ -8,7 +8,7 @@ const Weare = () => {
         dispatch(actions.setMain(false));
     });
     return (
-        <div className="container-fluid mt120">
+        <div className="container-fluid mt150">
             <div className="container">
                 <div className="row">
                     <div className="col-12 fs_18 lh18 fc0 f_we5 letter36">

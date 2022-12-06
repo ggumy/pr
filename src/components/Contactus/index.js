@@ -9,7 +9,7 @@ const Contactus = () => {
         dispatch(actions.setMain(false));
     });
     return (
-        <div className="container-fluid mt120">
+        <div className="container-fluid mt150">
             <div className="container ">
                 <div className="row">
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 left_gnb">

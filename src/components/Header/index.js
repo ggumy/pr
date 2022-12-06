@@ -15,7 +15,7 @@ const GNBContainer = styled.div`
     z-index: 100;
     display: flex;
     width: 100%;
-    height: 6rem;
+    height: 8rem;
 `;
 
 const tl = gsap.timeline();
