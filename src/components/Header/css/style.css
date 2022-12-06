@@ -86,3 +86,11 @@ nav .nav-menu .menu-text {
     transform: translateX(-150%);
     cursor: default;
 }
+
+.mainBg {
+    background-color: #111;
+}
+
+.subBg {
+    background-color: #fff;
+}

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux"; // 디스패치
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/style.css";
@@ -12,8 +13,21 @@ import NotFound from "./components/NotFound";
 import Inside from "./components/Inside";
 import Contactus from "./components/Contactus";
 import Portfolio from "./components/Portfolio";
+import Andproject from "./components/Portfolio/Andproject";
+
+const Init = () => {
+    const isMain = useSelector((state) => state.ui.isMain);
+    useEffect(() => {
+        if (isMain) {
+            document.body.style = "background-color: #111;";
+        } else {
+            document.body.style = "background-color: #fff;";
+        }
+    }, [isMain]);
+};
 
 const App = () => {
+    Init();
     return (
         <BrowserRouter>
             <Header />
@@ -23,6 +37,11 @@ const App = () => {
                 <Route path="/contactus" element={<Contactus />}></Route>
                 <Route path="/inside" element={<Inside />}></Route>
                 <Route path="/portfolio" element={<Portfolio />}></Route>
+                <Route
+                    path="/portfolio/andproject"
+                    element={<Andproject />}
+                ></Route>
+
                 <Route path="*" element={<NotFound />}></Route>
             </Routes>
             <Footer />

@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useRef } from "react";
+import { useSelector } from "react-redux"; // 디스패치
 import styled from "styled-components";
 import { gsap, Power3 } from "gsap";
 import FooterContainer from "./FooterContainer";
@@ -12,6 +13,7 @@ const FNBContainer = styled.div`
 const tl = gsap.timeline();
 const Footer = (props) => {
     const divRef = useRef();
+    const isMain = useSelector((state) => state.ui.isMain);
 
     useLayoutEffect(() => {
         const div01 = divRef.current;
@@ -23,7 +25,10 @@ const Footer = (props) => {
         });
     });
     return (
-        <FNBContainer ref={divRef} className="container-fluid fixed-bottom">
+        <FNBContainer
+            ref={divRef}
+            className={`container-fluid ${isMain ? "fixed-bottom" : ""}`}
+        >
             <FooterContainer />
         </FNBContainer>
     );

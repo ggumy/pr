@@ -15,24 +15,25 @@ https://hemanta.io/how-to-create-a-hamburger-menu-using-gsap-and-react/
 export const HambergerMenu = () => {
     const dispatch = useDispatch();
     const [itemcolor, setItemcolor] = useState("#fff");
+    const [t1] = useState(gsap.timeline({ paused: true, reversed: true }));
+    const [t2] = useState(gsap.timeline({ paused: true, reversed: true }));
 
     /** 시작 스토어 호출 */
     const NaviItems = useSelector((state) => state.ui.NaviItems);
     const isMain = useSelector((state) => state.ui.isMain);
-    //const isGnbVisible = useSelector((state) => state.ui.isGnbVisible);
+    const isGnbVisible = useSelector((state) => state.ui.isGnbVisible);
 
     useEffect(() => {
         if (isMain) {
             setItemcolor("#fff");
-            document.body.style = "background-color: #111;";
         } else {
-            setItemcolor("#000");
-            document.body.style = "background-color: #fff;";
+            if (isGnbVisible) {
+                setItemcolor("#fff");
+            } else {
+                setItemcolor("#000");
+            }
         }
-    }, [isMain, itemcolor]);
-
-    const t1 = gsap.timeline({ paused: true, reversed: true });
-    const t2 = gsap.timeline({ paused: true, reversed: true });
+    }, [isMain, isGnbVisible, itemcolor]);
 
     const navRef = useRef(null);
     const menuRef = useRef(null);
@@ -52,7 +53,7 @@ export const HambergerMenu = () => {
             opacity: 1,
             display: "flex",
             duration: 0.2,
-            ease: Power3.inOut,
+            ease: Power3.easeinOut,
         })
             .to(
                 menuLine1,
@@ -60,13 +61,13 @@ export const HambergerMenu = () => {
                     rotate: "45deg",
                     y: "0.65rem",
                     duration: 0.2,
-                    ease: Power3.inOut,
+                    ease: Power3.easeinOut,
                 },
                 "<"
             )
             .to(
                 menuLine2,
-                { x: "-105%", duration: 0.2, ease: Power3.inOut },
+                { x: "-105%", duration: 0.2, ease: Power3.easeinOut },
                 "<"
             )
             .to(
@@ -75,10 +76,11 @@ export const HambergerMenu = () => {
                     rotate: "-45deg",
                     y: "-0.65rem",
                     duration: 0.2,
-                    ease: Power3.inOut,
+                    ease: Power3.easeinOut,
                 },
                 "<"
-            );
+            )
+            .reverse();
 
         t2.to(menuLink1, {
             opacity: 1,
@@ -114,23 +116,25 @@ export const HambergerMenu = () => {
                 delay: 0.1,
                 duration: 0.1,
                 ease: Power3.easeIn,
-            });
+            })
+            .reverse();
     }, [t1, t2]);
 
-    const handleMenuClick = () => {
+    const handleMenuClick = (e) => {
+        e.preventDefault();
         if (t1.reversed()) {
             t1.play();
             dispatch(actions.visibleGNB(true));
         } else {
-            t1.reverse();
+            t1.progress(1).reverse(0);
             dispatch(actions.visibleGNB(false));
         }
-        t2.reversed() ? t2.play() : t2.reverse(0);
+        t2.reversed() ? t2.play() : t2.progress(1).reverse(0);
     };
 
     const handleNavLinkClick = () => {
-        t1.reverse();
-        t2.reverse(0);
+        t1.progress(1).reverse(0);
+        t2.progress(1).reverse(0);
         dispatch(actions.visibleGNB(false));
         dispatch(actions.setMain(false));
     };

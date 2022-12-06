@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useRef } from "react";
+import { useSelector } from "react-redux"; // 디스패치
 import styled from "styled-components";
 
 import { Logo } from "./Logo";
@@ -25,7 +26,7 @@ const Header = (props) => {
     };
 
     const divRef = useRef();
-
+    const isMain = useSelector((state) => state.ui.isMain);
     useLayoutEffect(() => {
         const div01 = divRef.current;
         tl.to(div01, {
@@ -41,7 +42,9 @@ const Header = (props) => {
             <GNBContainer
                 ref={divRef}
                 style={divStyle}
-                className="container-fluid fixed-top"
+                className={`container-fluid fixed-top ${
+                    !isMain ? "subBg" : ""
+                }`}
             >
                 <div className="container position-relative fc00">
                     <Logo />

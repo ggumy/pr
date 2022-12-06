@@ -9,7 +9,7 @@ const initialState = {
         { id: 2, name: "WE ARE", url: "/weare" },
         { id: 3, name: "PORTFOLIO", url: "/portfolio" },
         { id: 4, name: "INSIDE", url: "/inside" },
-        { id: 5, name: "CONTACT", url: "/contact" },
+        { id: 5, name: "CONTACT", url: "/contactus" },
     ],
 };
 

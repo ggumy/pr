@@ -8,10 +8,10 @@ const Weare = () => {
         dispatch(actions.setMain(false));
     });
     return (
-        <div className="container-fluid mt46">
+        <div className="container-fluid mt120">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 mt114 fs_18 lh18 fc0 f_we5 letter36">
+                    <div className="col-12 fs_18 lh18 fc0 f_we5 letter36">
                         WE ARE
                         <img
                             src={require("../../assets/images/page/title_icon.png")}
@@ -24,10 +24,10 @@ const Weare = () => {
                         CREATIVE DESIGN GROUP
                     </div>
                     <div className="col-12  fc0 fs_18 lh30 f_we5 mt10 mb77">
-                        XENUITY
+                        THEGRAPE
                     </div>
 
-                    <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4  fs_18 fc0 lh30 letterm36 text-justify mb20">
+                    <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 fs_18 fc0 lh30 letterm36 text-justify mb20">
                         <div className="row">
                             <div className="col-12 f_we5">
                                 최고의 실무자들과 다재다능한 인력
@@ -51,7 +51,7 @@ const Weare = () => {
                             </div>
                             <div className="col-12 ">
                                 10년 이상의 실무자들을 바탕으로 설립된
-                                제뉴이티는 국내외 대표적인 기업들의 프로젝트에
+                                더그레이프는 국내외 대표적인 기업들의 프로젝트에
                                 참여한 인력들로 구성 대기업, 금융사, 하이브랜드
                                 등 높은 크리에이티브 구현은 물론 기술적, 시각적,
                                 시간적 난이도가 높은 프로젝트 등을 통해 다양한
@@ -71,7 +71,7 @@ const Weare = () => {
                                 />
                             </div>
                             <div className="col-12  fs_14 fc0 f_we5 lh30">
-                                XENUITY COMPANY PDF
+                                THEGRAPE COMPANY PDF
                                 <img
                                     src="./images/page/r_bt.png"
                                     className="mtm3 ml10"
@@ -101,7 +101,7 @@ const Weare = () => {
                     </div>
 
                     <div className="col-12  fs_18 fc0 f_we2 lh30 mt80">
-                        제뉴이티는 다양한 경험을 바탕으로 고객이 원하는 방향을
+                        더그레이프는 다양한 경험을 바탕으로 고객이 원하는 방향을
                         제시하
                         <br />고 접근하여 고객의 지속적인 성공파트너가
                         되겠습니다.
@@ -109,7 +109,7 @@ const Weare = () => {
 
                     <div className="row mt70">
                         <div className="col-xl-3 col-lg-6 col-sm-12 col-12  mb30">
-                            <div className="col-12  fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
+                            <div className="position-relative col-12 fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
                                 DESIGN CONSULTING
                                 <div className="dis_box title_icon" />
                             </div>
@@ -133,7 +133,7 @@ const Weare = () => {
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-6 col-sm-12 col-12   mb30">
-                            <div className="col-12  fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
+                            <div className="position-relative col-12  fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
                                 GRAPHIC DESIGN
                                 <div className="dis_box title_icon" />
                             </div>
@@ -161,7 +161,7 @@ const Weare = () => {
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-6 col-sm-12 col-12   mb30">
-                            <div className="col-12  fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
+                            <div className="position-relative col-12  fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
                                 MAINTENANCE
                                 <div className="dis_box title_icon" />
                             </div>
@@ -184,7 +184,7 @@ const Weare = () => {
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-6 col-sm-12 col-12   mb30">
-                            <div className="col-12  fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
+                            <div className="position-relative col-12  fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
                                 DEVELOPMENT
                                 <div className="dis_box title_icon" />
                             </div>
