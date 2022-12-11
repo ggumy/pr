@@ -62,7 +62,7 @@ nav {
     top: -30px;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 30px);
     z-index: 1001;
     background-color: #111;
 }

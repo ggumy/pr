@@ -7,9 +7,9 @@ const initialState = {
     NaviItems: [
         { id: 1, name: "HOME", url: "/" },
         { id: 2, name: "WE ARE", url: "/weare" },
-        { id: 3, name: "PORTFOLIO", url: "/portfolio" },
-        { id: 4, name: "INSIDE", url: "/inside" },
-        { id: 5, name: "CONTACT", url: "/contactus" },
+        { id: 3, name: "INSIDE", url: "/inside" },
+        { id: 4, name: "PORTFOLIO", url: "/portfolio" },
+        { id: 5, name: "CONTACT US", url: "/contactus" },
     ],
 };
 

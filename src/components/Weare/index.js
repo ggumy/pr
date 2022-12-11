@@ -32,7 +32,7 @@ const Weare = () => {
                             <div className="col-12 f_we5">
                                 최고의 실무자들과 다재다능한 인력
                             </div>
-                            <div className="col-12 ">
+                            <div className="col-12 text_j">
                                 웹에이젼시, IT기업, 교육등 전문컨설턴트 등
                                 국내외 다양한 수상경력을 가진 크리에이티브
                                 디자이너 및 기획자로 인력구성, 다년간
@@ -49,7 +49,7 @@ const Weare = () => {
                             <div className="col-12  f_we5">
                                 경험과 노하우를 바탕으로 최고의 E-Business 전략
                             </div>
-                            <div className="col-12 ">
+                            <div className="col-12 text_j">
                                 10년 이상의 실무자들을 바탕으로 설립된
                                 더그레이프는 국내외 대표적인 기업들의 프로젝트에
                                 참여한 인력들로 구성 대기업, 금융사, 하이브랜드
@@ -62,7 +62,7 @@ const Weare = () => {
 
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 fs_18 fc0 lh30 letterm36 mb20">
                         <div className="row">
-                            <div className="col-12  fs_18 fc0 f_we5 lh30">
+                            <div className="col-12 fs_18 fc0 f_we5 lh30">
                                 DOWNLOAD{" "}
                                 <img
                                     src="./images/page/d_bt.png"
@@ -70,7 +70,7 @@ const Weare = () => {
                                     alt=""
                                 />
                             </div>
-                            <div className="col-12  fs_14 fc0 f_we5 lh30">
+                            <div className="col-12 fs_14 fc0 f_we5 lh30">
                                 THEGRAPE COMPANY PDF
                                 <img
                                     src="./images/page/r_bt.png"
@@ -78,7 +78,7 @@ const Weare = () => {
                                     alt=""
                                 />
                             </div>
-                            <div className="col-12  fs_14 fc0 f_we5 lh30">
+                            <div className="col-12 fs_14 fc0 f_we5 lh30">
                                 LOGO GUIDE
                                 <img
                                     src="./images/page/r_bt.png"
@@ -100,7 +100,7 @@ const Weare = () => {
                         />
                     </div>
 
-                    <div className="col-12  fs_18 fc0 f_we2 lh30 mt80">
+                    <div className="col-12 fs_18 fc0 f_we2 lh30 mt80">
                         더그레이프는 다양한 경험을 바탕으로 고객이 원하는 방향을
                         제시하
                         <br />고 접근하여 고객의 지속적인 성공파트너가
@@ -113,7 +113,7 @@ const Weare = () => {
                                 DESIGN CONSULTING
                                 <div className="dis_box title_icon" />
                             </div>
-                            <div className="col-12  fs_18 fc0 f_we2 lh30   text_j mt30">
+                            <div className="col-12 fs_18 fc0 f_we2 lh30   text_j mt30">
                                 디자인은 기업의 이미지, 제품을 홍보하기 위한
                                 요소로 브랜딩을 통한 온라인, 디지털마케팅 모바일
                                 등 다양한 분야에서 전략적으로 필요하며, 정해진
@@ -133,11 +133,11 @@ const Weare = () => {
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-6 col-sm-12 col-12   mb30">
-                            <div className="position-relative col-12  fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
+                            <div className="position-relative col-12 fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
                                 GRAPHIC DESIGN
                                 <div className="dis_box title_icon" />
                             </div>
-                            <div className="col-12  fs_18 fc0 f_we2 lh30   text_j mt30">
+                            <div className="col-12 fs_18 fc0 f_we2 lh30   text_j mt30">
                                 업무에 따라 업체를 찾아 개별적으로 진행하고
                                 작업된 소스를 필요한 해당 업체에 각각 전달하는
                                 방식은 업무의 효율성이나 고객이 원하는 브랜드의
@@ -161,11 +161,11 @@ const Weare = () => {
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-6 col-sm-12 col-12   mb30">
-                            <div className="position-relative col-12  fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
+                            <div className="position-relative col-12 fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
                                 MAINTENANCE
                                 <div className="dis_box title_icon" />
                             </div>
-                            <div className="col-12  fs_18 fc0 f_we2 lh30   text_j mt30">
+                            <div className="col-12 fs_18 fc0 f_we2 lh30   text_j mt30">
                                 지속적인 업무로 다수의 디자인 인원의 구성이 있는
                                 경우가 아니면 소수의 디자이너로 다양한 디자인
                                 업무를 진행하는 데에는 한계가 있습니다. 이런
@@ -184,11 +184,11 @@ const Weare = () => {
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-6 col-sm-12 col-12   mb30">
-                            <div className="position-relative col-12  fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
+                            <div className="position-relative col-12 fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
                                 DEVELOPMENT
                                 <div className="dis_box title_icon" />
                             </div>
-                            <div className="col-12  fs_18 fc0 f_we2 lh30   text_j mt30">
+                            <div className="col-12 fs_18 fc0 f_we2 lh30   text_j mt30">
                                 이제 오프라인의 세상은 온라인을 통해 이어지고 있
                                 으며. 온라인은 우리의 생활에 자연스럽게 흡수되어
                                 다양한 정보와 컨텐츠등이 온라인을 통해 전달되고
@@ -214,7 +214,7 @@ const Weare = () => {
                     />
                 </div>
 
-                <div className="col-12  fs_18 fc0 f_we2 lh30 mt30 prl15_5">
+                <div className="col-12 fs_18 fc0 f_we2 lh30 mt30 prl15_5">
                     같은 목적을 가지고 가치를 창조해오고 있는 파트너 고객사
                     입니다. <br />
                     지금도 다양한 고객사와 함께 크리에이티브를 만들어 가고

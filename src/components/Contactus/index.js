@@ -43,7 +43,7 @@ const Contactus = () => {
                     </div>
 
                     <div className="offset-xl-4 col-xl-8 offset-lg-4 col-lg-8 col-md-12 col-sm-12 col-12 ">
-                        <div className="col-12 fs_24_18 fc0 f_we5">
+                        <div className="col-12 fs_40_30_20 fc0 f_we5">
                             I hope you’ll have a <br />
                             precious relationship.
                         </div>
@@ -56,7 +56,7 @@ const Contactus = () => {
                         </div>
                         <div className="col-12  fs_18 lh18 f_we5 letter18 mt30 ">
                             <span className="dis_box ca_menu_ho mr27 cp mb10">
-                                SEOUL
+                                지도
                             </span>
                         </div>
 
