@@ -15,6 +15,8 @@ import Contactus from "./components/Contactus";
 import Portfolio from "./components/Portfolio";
 import Andproject from "./components/Portfolio/Andproject";
 
+// import { PageChangeMotion } from "./components/Motion";
+
 const Init = () => {
     const isMain = useSelector((state) => state.ui.isMain);
     useEffect(() => {

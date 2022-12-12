@@ -21,7 +21,7 @@ const Weare = () => {
                     </div>
 
                     <div className="col-12  fc0 fs_18 lh30 mt70">
-                        CREATIVE DESIGN GROUP
+                        CREATIVE GROUP
                     </div>
                     <div className="col-12  fc0 fs_18 lh30 f_we5 mt10 mb77">
                         THEGRAPE
@@ -33,13 +33,12 @@ const Weare = () => {
                                 최고의 실무자들과 다재다능한 인력
                             </div>
                             <div className="col-12 text_j">
-                                웹에이젼시, IT기업, 교육등 전문컨설턴트 등
-                                국내외 다양한 수상경력을 가진 크리에이티브
-                                디자이너 및 기획자로 인력구성, 다년간
-                                온라인프로모션, 전략, 기획/제작등을 직접 해온
-                                실주진 위주로, 대규모 프로젝트 및 다양한
-                                디바이스 제작경험이 풍부한 전문
-                                디자인업체입니다.
+                                웹에이전시, IT기업, 교육, 전문컨설턴트 등 국내외
+                                다양한 경력을 가진 크리에이티브 인력으로 구성된
+                                다양한 온라인 프로모션, 광고, 기획/제작 등을
+                                직접 실추진 위주로 대규모 프로젝트 및 다양한
+                                디바이스 제작경험이 풍부한 전문 프로그램 및
+                                디자인 업체입니다.
                             </div>
                         </div>
                     </div>
@@ -78,14 +77,6 @@ const Weare = () => {
                                     alt=""
                                 />
                             </div>
-                            <div className="col-12 fs_14 fc0 f_we5 lh30">
-                                LOGO GUIDE
-                                <img
-                                    src="./images/page/r_bt.png"
-                                    className="mtm3 ml10"
-                                    alt=""
-                                />
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -101,76 +92,24 @@ const Weare = () => {
                     </div>
 
                     <div className="col-12 fs_18 fc0 f_we2 lh30 mt80">
-                        더그레이프는 다양한 경험을 바탕으로 고객이 원하는 방향을
-                        제시하
-                        <br />고 접근하여 고객의 지속적인 성공파트너가
+                        더그레이프는 다양한 경험을 바탕으로 고객이 원하는 <br />
+                        방향을 제시하고 접근하여 고객의 지속적인 성공파트너가
                         되겠습니다.
                     </div>
 
                     <div className="row mt70">
                         <div className="col-xl-3 col-lg-6 col-sm-12 col-12  mb30">
                             <div className="position-relative col-12 fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
-                                DESIGN CONSULTING
+                                PLAN CONSULTING
                                 <div className="dis_box title_icon" />
                             </div>
                             <div className="col-12 fs_18 fc0 f_we2 lh30   text_j mt30">
-                                디자인은 기업의 이미지, 제품을 홍보하기 위한
-                                요소로 브랜딩을 통한 온라인, 디지털마케팅 모바일
-                                등 다양한 분야에서 전략적으로 필요하며, 정해진
-                                예산에서 디자인 컨설팅을 통해 효율적인 디자인의
-                                범위를 정하고 집행하면서 최대의 효과를 거두는데
-                                목적이 있습니다.
-                            </div>
-                            <div className="col-12  mt10 fs_16 fc0 f_we2 letterm36 lh30">
-                                - 브랜딩
-                                <br />
-                                - 온라인 프로모션
-                                <br />
-                                - 디지털 마케팅
-                                <br />
-                                - 모바일
-                                <br />- 미디어
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-sm-12 col-12   mb30">
-                            <div className="position-relative col-12 fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
-                                GRAPHIC DESIGN
-                                <div className="dis_box title_icon" />
-                            </div>
-                            <div className="col-12 fs_18 fc0 f_we2 lh30   text_j mt30">
-                                업무에 따라 업체를 찾아 개별적으로 진행하고
-                                작업된 소스를 필요한 해당 업체에 각각 전달하는
-                                방식은 업무의 효율성이나 고객이 원하는 브랜드의
-                                일관성을 유지하기 어렵습니다. 하나의 브랜드를
-                                다양한 업무와 연계 함으로서 시간과 비용적인
-                                부분에서 효율적입니다.
-                            </div>
-                            <div className="col-12  mt10 fs_16 fc0 f_we2 letterm36 lh30">
-                                - UX/UI
-                                <br />
-                                - 웹사이트
-                                <br />
-                                - 편집디자인
-                                <br />
-                                - 패키지디자인
-                                <br />
-                                - 브랜딩
-                                <br />
-                                - 포토그래피
-                                <br />- 멀티미디어
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-sm-12 col-12   mb30">
-                            <div className="position-relative col-12 fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
-                                MAINTENANCE
-                                <div className="dis_box title_icon" />
-                            </div>
-                            <div className="col-12 fs_18 fc0 f_we2 lh30   text_j mt30">
-                                지속적인 업무로 다수의 디자인 인원의 구성이 있는
-                                경우가 아니면 소수의 디자이너로 다양한 디자인
-                                업무를 진행하는 데에는 한계가 있습니다. 이런
-                                경우 디자인 업무를 연간 계약을 통해 기업이
-                                필요한 다양한 디자인 업무를 진행 할 수 있습니다.
+                                기업의 이미지, 제품을 홍보하기 위한 요소로
+                                브랜딩을 통한 온라인, 디지털마케팅 모바일 등
+                                다양한 분야에서 전략적으로 필요하며, 정해진
+                                예산에서 디자인 및 개발 컨설팅을 통해 효율적인
+                                디자인과 개발의 범위를 정하고 집행하면서 최대의
+                                효과를 거두는데 목적이 있습니다.
                             </div>
                             <div className="col-12  mt10 fs_16 fc0 f_we2 letterm36 lh30">
                                 - 브랜딩
@@ -196,10 +135,56 @@ const Weare = () => {
                                 비즈 니스에 파트너가 되어 성장하고자 합니다.
                             </div>
                             <div className="col-12  mt10 fs_16 fc0 f_we2 letterm36 lh30">
+                                - 웹 개발
+                                <br />
+                                - 모바일 개발
+                                <br />- 앱 개발
+                                <br />- E-커머스
+                            </div>
+                        </div>
+                        <div className="col-xl-3 col-lg-6 col-sm-12 col-12   mb30">
+                            <div className="position-relative col-12 fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
+                                GRAPHIC DESIGN
+                                <div className="dis_box title_icon" />
+                            </div>
+                            <div className="col-12 fs_18 fc0 f_we2 lh30   text_j mt30">
+                                업무에 따라 업체를 찾아 개별적으로 진행하고
+                                작업된 소스를 필요한 해당 업체에 각각 전달하는
+                                방식은 업무의 효율성이나 고객이 원하는 브랜드의
+                                일관성을 유지하기 어렵습니다. 하나의 브랜드를
+                                다양한 업무와 연계 함으로서 시간과 비용적인
+                                부분에서 효율적입니다.
+                            </div>
+                            <div className="col-12  mt10 fs_16 fc0 f_we2 letterm36 lh30">
+                                - UX/UI
+                                <br />
                                 - 웹사이트
                                 <br />
-                                - 모바일
-                                <br />- E-커머스
+                                - 편집디자인
+                                <br />
+                                - 패키지디자인
+                                <br />- 멀티미디어
+                            </div>
+                        </div>
+                        <div className="col-xl-3 col-lg-6 col-sm-12 col-12   mb30">
+                            <div className="position-relative col-12 fs_18 fc0 lh18 letter36 f_we7 overflow-hidden">
+                                MAINTENANCE
+                                <div className="dis_box title_icon" />
+                            </div>
+                            <div className="col-12 fs_18 fc0 f_we2 lh30   text_j mt30">
+                                지속적인 업무로 다수의 관련 인원의 구성이 있는
+                                경우가 아니면, 소수의 개발자, 디자이너로 다양한
+                                업무를 진행하는 데에는 한계가 있습니다. 이런
+                                경우 개발, 디자인 업무를 연간 계약을 통해 기업이
+                                필요한 다양한 디자인 업무를 진행 할 수 있습니다.
+                            </div>
+                            <div className="col-12  mt10 fs_16 fc0 f_we2 letterm36 lh30">
+                                - 웹 사이트 / 모바일 사이트
+                                <br />
+                                - 온라인 프로모션
+                                <br />
+                                - 디자인
+                                <br />- 개발
                             </div>
                         </div>
                     </div>

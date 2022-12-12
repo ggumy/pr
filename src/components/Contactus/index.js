@@ -12,7 +12,7 @@ const Contactus = () => {
         <div className="container-fluid mt150">
             <div className="container ">
                 <div className="row">
-                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 left_gnb">
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ">
                         <div className="col-12 fs_18 lh18 fc0 f_we5 letter36">
                             CONTACT
                             <img
@@ -42,8 +42,9 @@ const Contactus = () => {
                         </div>
                     </div>
 
-                    <div className="offset-xl-4 col-xl-8 offset-lg-4 col-lg-8 col-md-12 col-sm-12 col-12 ">
-                        <div className="col-12 fs_40_30_20 fc0 f_we5">
+                    <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 ">
+                        <div className="d-xl-block d-lg-block d-md-none d-sm-none d-none mt77"></div>
+                        <div className="col-12 fs_40_30_20 fc0 f_we5 ">
                             I hope you’ll have a <br />
                             precious relationship.
                         </div>
