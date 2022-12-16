@@ -1,7 +1,8 @@
 import React from "react";
 import List from "./List";
+import View from "./View";
 
-const Portfolio = () => {
+export const Portfolio = () => {
     return (
         <div>
             <List />
@@ -9,4 +10,10 @@ const Portfolio = () => {
     );
 };
 
-export default Portfolio;
+export const PortfolioView = () => {
+    return (
+        <div>
+            <View />
+        </div>
+    );
+};

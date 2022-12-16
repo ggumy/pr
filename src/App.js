@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 import Inside from "./components/Inside";
 import Contactus from "./components/Contactus";
-import Portfolio from "./components/Portfolio";
+import { Portfolio, PortfolioView } from "./components/Portfolio";
 import Andproject from "./components/Portfolio/Andproject";
 
 // import { PageChangeMotion } from "./components/Motion";
@@ -39,6 +39,10 @@ const App = () => {
                 <Route path="/contactus" element={<Contactus />}></Route>
                 <Route path="/inside" element={<Inside />}></Route>
                 <Route path="/portfolio" element={<Portfolio />}></Route>
+                <Route
+                    path="/portfolio/view/:id"
+                    element={<PortfolioView />}
+                ></Route>
                 <Route
                     path="/portfolio/andproject"
                     element={<Andproject />}

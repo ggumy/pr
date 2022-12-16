@@ -1,88 +1,108 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { gsap, Circ } from "gsap";
+import { gsap, Expo } from "gsap";
 
-/**
-
-var rect = $('#container')[0].getBoundingClientRect();
-var mouse = {x: 0, y: 0, moved: false};
-
-$("#container").mousemove(function(e) {
-  mouse.moved = true;
-  mouse.x = e.clientX - rect.left;
-  mouse.y = e.clientY - rect.top;
-});
- 
-// Ticker event will be called on every frame
-TweenLite.ticker.addEventListener('tick', function(){
-  if (mouse.moved){    
-    parallaxIt(".slide", -100);
-    parallaxIt("img", -30);
-  }
-  mouse.moved = false;
-});
-
-function parallaxIt(target, movement) {
-  TweenMax.to(target, 0.5, {
-    x: (mouse.x - rect.width / 2) / rect.width * movement,
-    y: (mouse.y - rect.height / 2) / rect.height * movement
-  });
-}
-
-$(window).on('resize scroll', function(){
-  rect = $('#container')[0].getBoundingClientRect();
-})
-
- */
-const Card = () => {
+const Card = (props) => {
+    const { id } = props;
     const Scale = useRef(null);
-    const [t1] = useState(gsap.timeline({ paused: true, reversed: true }));
+    const [t1, setT1] = useState(false);
+    const [rect, setRect] = useState(false);
+    const [mouse] = useState({ x: 0, y: 0, moved: false });
+    const url = `/portfolio/view/${id}`;
+
     useLayoutEffect(() => {
         const imgcon = Scale.current.querySelector(".img-con");
+        setRect(Scale.current.getBoundingClientRect());
 
-        t1.to(imgcon, {
-            scale: 1.3,
-            duration: 0.5,
-            ease: Circ.easeInOut,
-        });
+        if (t1) {
+            gsap.to(imgcon, {
+                scale: 1.2,
+                duration: 2,
+                ease: Expo.easeOut,
+            });
+        } else {
+            gsap.to(imgcon, {
+                scale: 1,
+                duration: 2,
+                ease: Expo.easeOut,
+            });
+        }
     }, [t1]);
 
+    function parallaxIt(target, movement) {
+        let mX = Math.round(
+            ((mouse.x - rect.width / 2) / rect.width) * movement
+        );
+        mX = mX > -10 ? mX : -10;
+        let mY = Math.round(
+            ((mouse.y - rect.height / 2) / rect.height) * movement
+        );
+        mY = mY > -10 ? mY : -10;
+
+        gsap.to(target, {
+            ease: Expo.easeOut,
+            duration: 1,
+            x: mX,
+            y: mY,
+        });
+    }
+
     const onMueseUpHandler = (e) => {
+        const img = e.currentTarget.querySelector(".img-con");
         if (e.type === "click") {
-            t1.play();
+            setT1(true);
         } else if (e.type === "mouseover") {
-            t1.play();
+            setT1(true);
         } else if (e.type === "mouseout") {
-            t1.reverse();
+            gsap.to(img, {
+                duration: 1,
+                x: 0,
+                y: 0,
+                ease: Expo.easeOut,
+            });
+            mouse.moved = false;
+            setT1(false);
         }
-        //t1.reversed() ? t1.play() : t1.reverse();
+    };
+
+    const onMouseMoveHandler = (e) => {
+        mouse.moved = true;
+        const img = e.currentTarget.querySelector(".img-con");
+        const t = e;
+        mouse.x = t.clientX - rect.left;
+        mouse.y = t.clientY - rect.top;
+        if (mouse.moved) {
+            parallaxIt(img, -20);
+        }
+        mouse.moved = false;
     };
 
     return (
-        <div
-            ref={Scale}
-            className="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb50_30"
-            onMouseOut={onMueseUpHandler}
-            onClick={onMueseUpHandler}
-            onMouseOver={onMueseUpHandler}
-        >
-            <div className="card d-flex">
-                <div className="card-top cp overflow-hidden">
-                    <Link to="#">
+        <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb50_30">
+            <div className="g-card d-flex flex-column">
+                <div
+                    ref={Scale}
+                    className="g-card-top cp overflow-hidden"
+                    onMouseOut={onMueseUpHandler}
+                    onClick={onMueseUpHandler}
+                    onMouseOver={onMueseUpHandler}
+                    onMouseMove={onMouseMoveHandler}
+                >
+                    <Link to={url}>
                         <img
                             src={require("../../assets/images/portfolio/uniq.png")}
                             alt=""
-                            className="img-con card-img-top img-fluid"
+                            className="img-con img-fluid"
                         />
                     </Link>
                 </div>
 
-                <Link to="#">
-                    <div className="card-body">
+                <div className="g-card-body mt10">
+                    <Link to={url}>
                         <h6 className="card-title f_we6">유니클로 2022</h6>
                         <p className="card-text fs_13 fc0">광고, 웹</p>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
             </div>
         </div>
     );

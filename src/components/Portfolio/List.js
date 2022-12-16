@@ -51,7 +51,7 @@ const List = () => {
                     {(function () {
                         let etc = [];
                         for (let index = 0; index <= 11; index++) {
-                            etc.push(<Card key={index} />);
+                            etc.push(<Card key={index} id={index} />);
                         }
                         return etc;
                     })()}
