@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux"; // 디스패치
 import * as actions from "../../actions"; // store 엑션 함수를 호출
 
@@ -11,19 +12,24 @@ const Andproject = () => {
         <div className="container-fluid mt150">
             <div className="container">
                 <div className="col-12 fs_18 lh18 fc0 f_we5 letter36">
-                    AND PROJECT
+                    AND PORTFOLIO
                     <img
                         src={require("../../assets/images/page/title_icon.png")}
                         className="mtm5"
                         alt=""
                     />
                 </div>
+                <div className="row mt47">
+                    <div className="col-lg-6 col-12 fs_18 fc0 lh30 mt25 justify-content-end">
+                        제뉴이티(팩토리세븐&지인터렉티브)는 그동안 구축되어온
+                        웹사이트들을 대상으로 하는 우수 웹사이트 평가시상식인
+                        웹어워드 코리아의 브랜드 및 영화사이트부분에서 여러차레
+                        수상하며 크리에이티브를 인정받았습니다.
+                    </div>
 
-                <div className="col-lg-6 col-12 mt77 fs_18 fc0 lh30 letter,36">
-                    제뉴이티(팩토리세븐&지인터렉티브)는 그동안 구축되어온
-                    웹사이트들을 대상으로 하는 우수 웹사이트 평가시상식인
-                    웹어워드 코리아의 브랜드 및 영화사이트부분에서 여러차레
-                    수상하며 크리에이티브를 인정받았습니다.
+                    <div className="col-lg-6 col-12 text-end fc00 mt25 fs_18 f_we5 letter18">
+                        <Link to="/portfolio">PORTFOLIO</Link>
+                    </div>
                 </div>
 
                 <div className="row mt80">

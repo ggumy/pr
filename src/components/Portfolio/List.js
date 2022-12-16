@@ -41,7 +41,7 @@ const List = () => {
                         </span>
                     </div>
                     <div className="col-6 text-end fc00 f_we5 letter18">
-                        <Link to="/portfolio/andproject">AND PROJECT</Link>
+                        <Link to="/portfolio/andproject">AND PORTFOLIO</Link>
                     </div>
                 </div>
             </div>

@@ -66,7 +66,7 @@ export const View = () => {
                                 </li>
                             </ul>
 
-                            <ul className="mz pz mt40">
+                            <ul className="d-xl-block d-lg-block d-md-none d-sm-none d-none mz pz mt40">
                                 <li className="fs_25 float-start mz pz text-left">
                                     <CgLayoutList className="mz pz text-left" />
                                 </li>
@@ -91,6 +91,10 @@ export const View = () => {
                             alt=""
                             className="img-con img-fluid"
                         />
+
+                        <div className="col-xl-12 col-lg-12 d-xl-none d-lg-none d-md-block d-sm-block d-block mz pz mt40 text-center fs_15 f_we5">
+                            <Link to="/portfolio">리스트로 돌아가기</Link>
+                        </div>
                     </div>
                 </div>
             </div>
