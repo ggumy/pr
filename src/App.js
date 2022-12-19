@@ -10,7 +10,7 @@ import Home from "./components/Home";
 import Weare from "./components/Weare";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
-import Inside from "./components/Inside";
+import { Inside, InsideView } from "./components/Inside";
 import Contactus from "./components/Contactus";
 import { Portfolio, PortfolioView } from "./components/Portfolio";
 import Andproject from "./components/Portfolio/Andproject";
@@ -38,6 +38,7 @@ const App = () => {
                 <Route path="/weare" element={<Weare />}></Route>
                 <Route path="/contactus" element={<Contactus />}></Route>
                 <Route path="/inside" element={<Inside />}></Route>
+                <Route path="/inside/view/:id" element={<InsideView />}></Route>
                 <Route path="/portfolio" element={<Portfolio />}></Route>
                 <Route
                     path="/portfolio/view/:id"

@@ -20,14 +20,11 @@ const Andproject = () => {
                     />
                 </div>
                 <div className="row mt47">
-                    <div className="col-lg-6 col-12 fs_18 fc0 lh30 mt25 justify-content-end">
-                        제뉴이티(팩토리세븐&지인터렉티브)는 그동안 구축되어온
-                        웹사이트들을 대상으로 하는 우수 웹사이트 평가시상식인
-                        웹어워드 코리아의 브랜드 및 영화사이트부분에서 여러차레
-                        수상하며 크리에이티브를 인정받았습니다.
+                    <div className="col-lg-6 col-md-6 col-12 fs_18 fc0 lh30 mt25 justify-content-end">
+                        더그레이프의 포트폴리오 이외에 정리한 AND PORTFOLIO
                     </div>
 
-                    <div className="col-lg-6 col-12 text-end fc00 mt25 fs_18 f_we5 letter18">
+                    <div className="col-lg-6 col-md-6 col-12 text-end fc00 mt25 fs_18 f_we5 letter18">
                         <Link to="/portfolio">PORTFOLIO</Link>
                     </div>
                 </div>
