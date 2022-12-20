@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import { useSelector } from "react-redux"; // 디스패치
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/style.css";
 
+import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Weare from "./components/Weare";
@@ -31,10 +33,11 @@ const Init = () => {
 const App = () => {
     Init();
     return (
-        <BrowserRouter>
+        <Router>
+            <ScrollToTop />
             <Header />
             <Routes>
-                <Route path="/" element={<Home />}></Route>
+                <Route index path="/" element={<Home />}></Route>
                 <Route path="/weare" element={<Weare />}></Route>
                 <Route path="/contactus" element={<Contactus />}></Route>
                 <Route path="/inside" element={<Inside />}></Route>
@@ -52,7 +55,7 @@ const App = () => {
                 <Route path="*" element={<NotFound />}></Route>
             </Routes>
             <Footer />
-        </BrowserRouter>
+        </Router>
     );
 };
 

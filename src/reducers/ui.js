@@ -35,6 +35,17 @@ export default function ui(state = initialState, action) {
                 ...state,
                 isPostViewToggle: action.isPostViewToggle,
             };
+        /**  두개 이용 안함 추후 변경*/
+        case types.CURRENT_PAGE:
+            return {
+                ...state,
+                currentPage: action.currentPage,
+            };
+        case types.PREVENT_PAGE:
+            return {
+                ...state,
+                preventPage: action.preventPage,
+            };
         default:
             return state;
     }

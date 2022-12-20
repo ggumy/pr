@@ -11,7 +11,7 @@ const List = () => {
     });
 
     return (
-        <div className="container-fluid mt150" style={{ zIndex: 1 }}>
+        <div className="portfolio container-fluid mt150" style={{ zIndex: 1 }}>
             <div className="container ">
                 <div className="col-12 fs_18 lh18 fc0 f_we5 letter36">
                     PORTFOLIO

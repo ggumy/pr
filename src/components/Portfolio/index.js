@@ -3,17 +3,9 @@ import List from "./List";
 import View from "./View";
 
 export const Portfolio = () => {
-    return (
-        <div>
-            <List />
-        </div>
-    );
+    return <List />;
 };
 
 export const PortfolioView = () => {
-    return (
-        <div>
-            <View />
-        </div>
-    );
+    return <View />;
 };

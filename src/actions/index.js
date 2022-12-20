@@ -27,3 +27,19 @@ export function visiblePostView(isPostViewToggle) {
         isPostViewToggle,
     };
 }
+
+/**  두개 이용 안함 추후 변경*/
+
+export function currentPage(currentPage) {
+    return {
+        type: types.CURRENT_PAGE,
+        currentPage,
+    };
+}
+
+export function preventPage(preventPage) {
+    return {
+        type: types.PREVENT_PAGE,
+        preventPage,
+    };
+}

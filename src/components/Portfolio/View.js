@@ -71,7 +71,10 @@ export const View = () => {
                                     <CgLayoutList className="mz pz text-left" />
                                 </li>
                                 <li className="fs_15 f_we5 float-start mt3 mr10">
-                                    <Link to="/portfolio">
+                                    <Link
+                                        to="/portfolio"
+                                        preventScrollReset={true}
+                                    >
                                         리스트로 돌아가기
                                     </Link>
                                 </li>
@@ -93,7 +96,9 @@ export const View = () => {
                         />
 
                         <div className="col-xl-12 col-lg-12 d-xl-none d-lg-none d-md-block d-sm-block d-block mz pz mt40 text-center fs_15 f_we5">
-                            <Link to="/portfolio">리스트로 돌아가기</Link>
+                            <Link to="/portfolio" preventScrollReset={true}>
+                                리스트로 돌아가기
+                            </Link>
                         </div>
                     </div>
                 </div>
