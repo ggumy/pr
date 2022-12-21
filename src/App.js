@@ -6,12 +6,12 @@ import { useSelector } from "react-redux"; // 디스패치
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/style.css";
 
-import ScrollToTop from "./components/ScrollToTop";
+import { ScrolltoTop } from "./components/Tools";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Weare from "./components/Weare";
 import Footer from "./components/Footer";
-import NotFound from "./components/NotFound";
+import NotFound from "./components/Tools/NotFound";
 import { Inside, InsideView } from "./components/Inside";
 import Contactus from "./components/Contactus";
 import { Portfolio, PortfolioView } from "./components/Portfolio";
@@ -34,7 +34,7 @@ const App = () => {
     Init();
     return (
         <Router>
-            <ScrollToTop />
+            <ScrolltoTop />
             <Header />
             <Routes>
                 <Route index path="/" element={<Home />}></Route>
