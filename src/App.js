@@ -3,21 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { useSelector } from "react-redux"; // 디스패치
 
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/style.css";
 
-import { ScrolltoTop } from "./components/Tools";
+import { ScrolltoTop, NotFound, PageLoading } from "./components/Tools";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Weare from "./components/Weare";
 import Footer from "./components/Footer";
-import NotFound from "./components/Tools/NotFound";
 import { Inside, InsideView } from "./components/Inside";
 import Contactus from "./components/Contactus";
 import { Portfolio, PortfolioView } from "./components/Portfolio";
 import Andproject from "./components/Portfolio/Andproject";
-
-// import { PageChangeMotion } from "./components/Motion";
 
 const Init = () => {
     const isMain = useSelector((state) => state.ui.isMain);
@@ -31,9 +27,24 @@ const Init = () => {
 };
 
 const App = () => {
+    const isPageLoad = useSelector((state) => state.ui.isPageLoad);
     Init();
+    /*
+    const dispatch = useDispatch();
+    useLayoutEffect(() => {
+        if (isPageLoad) {
+            dispatch(actions.setPageLoading(false));
+        } else {
+            dispatch(actions.setPageLoading(false));
+        }
+    }, [isPageLoad]);
+    */
+
+    console.log(isPageLoad);
+
     return (
         <Router>
+            <PageLoading />
             <ScrolltoTop />
             <Header />
             <Routes>

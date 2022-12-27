@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import * as types from "./ActionTypes";
 
 export function setGNB(isSetGNB) {
@@ -20,6 +21,13 @@ export function setMain(isMain) {
         isMain,
     };
 }
+
+export const setPageLoading = (isPageLoad) => {
+    return {
+        type: type.SET_PAGE_LOADING,
+        isPageLoad,
+    };
+};
 
 export function visiblePostView(isPostViewToggle) {
     return {

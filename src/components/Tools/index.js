@@ -2,6 +2,7 @@ import React from "react";
 import ScrollToTop from "./ScrollToTop";
 import PageChangeMotion from "./Motion";
 import Loading from "./Loading";
+import NotFoundContainer from "./NotFoundContainer";
 
 export const ScrolltoTop = () => {
     return <ScrollToTop />;
@@ -12,6 +13,12 @@ export const PageMotion = () => {
 };
 
 // 페이지 로딩 만들거임
-export const pageLoading = () => {
+export const PageLoading = () => {
     return <Loading />;
 };
+
+export const NotFound = () => {
+    return <NotFoundContainer />;
+};
+
+export default ScrolltoTop;

@@ -7,7 +7,7 @@ const Container = styled.div`
     height: calc(100vh-130px);
 `;
 
-const NotFound = () => {
+const NotFoundContainer = () => {
     return (
         <Container>
             <div className="container fc00">404 Error</div>
@@ -15,4 +15,4 @@ const NotFound = () => {
     );
 };
 
-export default NotFound;
+export default NotFoundContainer;

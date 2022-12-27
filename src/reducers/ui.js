@@ -4,6 +4,7 @@ const initialState = {
     isMain: true,
     isGnbVisible: false,
     isPostViewToggle: false,
+    isPageLoad: false,
     NaviItems: [
         { id: 1, name: "HOME", url: "/" },
         { id: 2, name: "WE ARE", url: "/weare" },
@@ -29,6 +30,11 @@ export default function ui(state = initialState, action) {
             return {
                 ...state,
                 isMain: action.isMain,
+            };
+        case types.SET_PAGE_LOADING:
+            return {
+                ...state,
+                isPageLoad: action.isPageLoad,
             };
         case types.POST_VIEW_TOGGLE:
             return {
