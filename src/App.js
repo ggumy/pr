@@ -27,7 +27,7 @@ const Init = () => {
 };
 
 const App = () => {
-    const isPageLoad = useSelector((state) => state.ui.isPageLoad);
+    // const isPageLoad = useSelector((state) => state.ui.isPageLoad);
     Init();
     /*
     const dispatch = useDispatch();
@@ -39,8 +39,6 @@ const App = () => {
         }
     }, [isPageLoad]);
     */
-
-    console.log(isPageLoad);
 
     return (
         <Router>
@@ -55,7 +53,7 @@ const App = () => {
                 <Route path="/inside/view/:id" element={<InsideView />}></Route>
                 <Route path="/portfolio" element={<Portfolio />}></Route>
                 <Route
-                    path="/portfolio/view/:id"
+                    path="/portfolio/view/:view_id"
                     element={<PortfolioView />}
                 ></Route>
                 <Route

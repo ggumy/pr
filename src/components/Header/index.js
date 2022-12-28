@@ -35,7 +35,7 @@ const Header = (props) => {
             duration: 0.3,
             ease: Power3.easeInOut,
         });
-    });
+    }, [isMain]);
 
     return (
         <>

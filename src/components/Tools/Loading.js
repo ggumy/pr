@@ -22,14 +22,13 @@ const Loading = () => {
         }
     }, [location, from, isChange]);
 
-    console.log(from + " | " + location.pathname);
-    console.log("isChange", isChange);
     return isChange ? <Motion /> : "";
 };
 
 const Motion = () => {
     const startRef = useRef(null);
 
+    const t0 = gsap.timeline();
     const t1 = gsap.timeline();
     const t2 = gsap.timeline();
     const t3 = gsap.timeline();
@@ -40,12 +39,28 @@ const Motion = () => {
         const movediv01 = startRef.current.querySelector(".movediv01");
         const movediv02 = startRef.current.querySelector(".movediv02");
         const loadingbar = startRef.current.querySelector(".loadingbar");
+        const loadingText = startRef.current.querySelector(".loading_text");
 
-        t1.to(loadingbar, { x: 0, duration: 1.5, ease: Power3.easeInOut })
+        t0.to(loadingText, {
+            opacity: 1,
+            duration: 0.3,
+            delay: 0,
+            ease: Power3.easeInOut,
+        })
+            .to(loadingText, {
+                opacity: 0,
+                duration: 0.3,
+                delay: 0,
+                ease: Power3.easeIn,
+            })
+            .to(loadingText, {
+                display: "none",
+            });
+        t1.to(loadingbar, { x: 0, duration: 0.3, ease: Power3.easeInOut })
             .to(loadingbar, {
                 opacity: 0,
-                duration: 0.2,
-                delay: 0,
+                duration: 0.1,
+                delay: 0.1,
                 ease: Power3.easeIn,
             })
             .to(loadingbar, {
@@ -55,8 +70,8 @@ const Motion = () => {
         t2.to(movediv01, {
             y: "-100%",
             opacity: 1,
-            duration: 0.3,
-            delay: 1.6,
+            duration: 0.4,
+            delay: 0.4,
             ease: Power3.easeOut,
         }).to(movediv01, {
             display: "none",
@@ -65,8 +80,8 @@ const Motion = () => {
         t3.to(movediv02, {
             y: "100%",
             opacity: 1,
-            duration: 0.5,
-            delay: 1.6,
+            duration: 0.4,
+            delay: 0.4,
             ease: Power3.easeOut,
         }).to(movediv02, {
             display: "none",
@@ -74,12 +89,13 @@ const Motion = () => {
 
         t4.to(condiv.current, {
             display: "none",
-            delay: 2,
+            delay: 0.6,
         });
-    }, [t1, t2, t3, t4]);
+    }, [t0, t1, t2, t3, t4]);
 
     return (
         <div ref={startRef} className="condiv">
+            <div className="loading_text text-center">THE GRAPE LOADING</div>
             <div className="loadingbar"></div>
             <div className="overlay movediv02"></div>
             <div className="overlay movediv01"></div>

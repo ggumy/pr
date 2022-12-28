@@ -4,7 +4,10 @@ import { useDispatch } from "react-redux"; // 디스패치
 import * as actions from "../../actions"; // store 엑션 함수를 호출
 import Card from "./Card";
 
+import { portfolioData } from "../../api/portfolioData";
+
 const List = () => {
+    const { data } = portfolioData;
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(actions.setMain(false));
@@ -48,13 +51,17 @@ const List = () => {
 
             <div className="container mt50">
                 <div className="row">
-                    {(function () {
-                        let etc = [];
-                        for (let index = 0; index <= 11; index++) {
-                            etc.push(<Card key={index} id={index} />);
-                        }
-                        return etc;
-                    })()}
+                    {data.map((data, index) => {
+                        return (
+                            <Card
+                                key={index}
+                                list_id={index}
+                                imgUrl={data.imgUrl}
+                                name={data.name}
+                                service={data.services}
+                            />
+                        );
+                    })}
 
                     <div className="col-12 pz text-center fs_18 lh18 fc0 letter18 mt30">
                         <span className="f_we5"> ::: END ::: </span>

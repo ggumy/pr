@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { gsap, Expo } from "gsap";
 
 const Card = (props) => {
-    const { id } = props;
+    const { list_id, imgUrl, name, service } = props;
     const Scale = useRef(null);
     const [t1, setT1] = useState(false);
     const [rect, setRect] = useState(false);
     const [mouse] = useState({ x: 0, y: 0, moved: false });
-    const url = `/portfolio/view/${id}`;
+    const url = `/portfolio/view/${list_id}`;
 
     useLayoutEffect(() => {
         const imgcon = Scale.current.querySelector(".img-con");
@@ -90,7 +90,7 @@ const Card = (props) => {
                 >
                     <Link to={url}>
                         <img
-                            src={require("../../assets/images/portfolio/uniq.png")}
+                            src={imgUrl}
                             alt=""
                             className="img-con img-fluid"
                         />
@@ -99,8 +99,8 @@ const Card = (props) => {
 
                 <div className="g-card-body mt10">
                     <Link to={url}>
-                        <h6 className="card-title f_we6">유니클로 2022</h6>
-                        <p className="card-text fs_13 fc0">광고, 웹</p>
+                        <h6 className="card-title f_we6">{name}</h6>
+                        <p className="card-text fs_13 fc0">{service}</p>
                     </Link>
                 </div>
             </div>
